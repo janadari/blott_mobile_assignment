@@ -1,0 +1,50 @@
+# Node modules
+/node_modules/
+
+# Build output
+/android/build/
+/ios/build/
+/ios/Pods/
+
+# Dependency directories
+/node_modules/
+
+# Expo and React Native tools
+.expo/
+.expo-shared/
+
+# Android Studio
+*.iml
+.idea/
+
+# macOS system files
+.DS_Store
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Temporary files
+*.swp
+*.swo
+
+# React Native packager
+/.react/
+
+# Testing
+coverage/
+*.log
+
+# Build caches
+*.apk
+*.aab
+
+# Gradle
+.gradle/
+build/
+
+# Android specific
+android/.gradle/
+/android/app/build/
+android/app/libs/
