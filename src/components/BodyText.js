@@ -3,7 +3,7 @@ import React from 'react';
 import { View, StyleSheet, TextInput } from 'react-native';
 import StyledText from './StyledText';
 
-const BodyText = ({ text ,style}) => {
+const BodyText = ({ text, style }) => {
 
     return (
 

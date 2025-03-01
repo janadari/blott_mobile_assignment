@@ -1,7 +1,7 @@
 import React from "react";
 import { TouchableOpacity, Image, StyleSheet } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import backButton from "../assets/images/back_button.png";
+import backButton from "../../assets/images/back_button.png";
 
 const BackButton = () => {
     const navigation = useNavigation();

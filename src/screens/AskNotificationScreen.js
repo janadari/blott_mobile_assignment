@@ -5,7 +5,7 @@ import BodyText from "../components/BodyText";
 import { check, request, PERMISSIONS, RESULTS } from 'react-native-permissions';
 import { Platform } from 'react-native';
 import { Alert } from "react-native";
-import notificationIcon from '../assets/images/notification_icon.png'
+import notificationIcon from '../../assets/images/notification_icon.png'
 import CustomButton from "../components/CustomButton";
 import BackButton from "../components/BackButton";
 
