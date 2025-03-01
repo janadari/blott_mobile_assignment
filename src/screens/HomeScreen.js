@@ -13,17 +13,13 @@ const HomeScreen = () => {
   const [errorMsg, setErrorMsg] = useState(null);
 
   useEffect(() => {
-    console.log("username-home", userName);
-  });
-  useEffect(() => {
-    console.log("username", userName);
-
     const fetchData = async () => {
       let datalist = await getData();
       setData(datalist || []);
       setLoading(false);
     };
 
+    // fetch data from a api
     fetchData();
   }, []);
 
@@ -38,7 +34,7 @@ const HomeScreen = () => {
       }
 
       const data = await response.json();
-      console.log(data);
+
       return data;
     } catch (error) {
       console.error("Fetch error:", error);

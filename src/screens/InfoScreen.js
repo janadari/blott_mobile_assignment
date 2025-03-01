@@ -16,12 +16,8 @@ import BodyText from "../components/BodyText";
 import FabButton from "../components/FabButton";
 
 const InfoScreen = ({ navigation }) => {
-  const [firstName, setFirstName] = useState("shehani");
-  const [lastName, setLastName] = useState("janadari");
-
-  useEffect(() => {
-    console.log("test");
-  }, [firstName]);
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
 
   const onClickBtn = async () => {
     // added only the first name, since the design have only the user's first name in home
@@ -29,6 +25,7 @@ const InfoScreen = ({ navigation }) => {
     navigation.navigate("NotificationScreen");
   };
 
+  //   save data to asyncStorage
   const saveUserData = async (key, value) => {
     try {
       await AsyncStorage.setItem(key, value);
@@ -42,7 +39,7 @@ const InfoScreen = ({ navigation }) => {
     <SafeAreaView style={styles.sectionContainer}>
       <KeyboardAvoidingView
         style={{ flex: 1 }}
-        behavior={Platform.OS === "ios" ? "padding" : "height"} // Adjust the behavior based on the platform
+        behavior={Platform.OS === "ios" ? "padding" : "height"}
       >
         <View style={styles.container}>
           <TitleText title={"Your legal name"}></TitleText>
@@ -59,6 +56,7 @@ const InfoScreen = ({ navigation }) => {
             value={firstName}
             placeholder="First name"
             placeholderTextColor="#A3A3A3"
+            autoCapitalize="words"
             onChangeText={(text) => setFirstName(text)}
           />
 
@@ -67,6 +65,7 @@ const InfoScreen = ({ navigation }) => {
             value={lastName}
             placeholder="Last name"
             placeholderTextColor="#A3A3A3"
+            autoCapitalize="words"
             onChangeText={(text) => setLastName(text)}
           />
 

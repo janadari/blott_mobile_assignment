@@ -35,6 +35,10 @@
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string></string>
 
+<key>NSCameraUsageDescription</key>
+<string>Notifications may include alerts, sounds, and icon badges. These can be configured in Settings.</string>
+
+
 	<key>NSUserNotificationUsageDescription</key>
     <string>We need access to send you notifications</string>
 

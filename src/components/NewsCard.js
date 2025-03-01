@@ -6,21 +6,24 @@ import {
   Image,
   TouchableOpacity,
   Linking,
+  ActivityIndicator,
 } from "react-native";
 import FastImage from "react-native-fast-image";
 
 const NewsCard = ({ item }) => {
+  const [loading, setLoading] = useState(true);
+
+  //   convert time stamp to the format DD / month / YYYY
   const formatDate = (timestamp) => {
-    return new Date(timestamp).toLocaleDateString("en-GB", {
+    return new Date(timestamp * 1000).toLocaleDateString("en-GB", {
       day: "2-digit",
       month: "long",
       year: "numeric",
     });
   };
 
+  //   open a link in web
   const openLink = () => {
-    console.log("te", item);
-
     Linking.openURL(item?.url).catch((err) =>
       console.error("Failed to open URL: ", err)
     );
@@ -30,6 +33,11 @@ const NewsCard = ({ item }) => {
     <TouchableOpacity style={styles.container} onPress={() => openLink()}>
       <View style={styles.flexContainer}>
         <View style={styles.flexLeft}>
+          {loading && (
+            <View style={styles.loadingContainer}>
+              <ActivityIndicator size="large" color="#0000ff" />
+            </View>
+          )}
           <FastImage
             style={styles.img}
             source={{
@@ -37,6 +45,8 @@ const NewsCard = ({ item }) => {
               priority: FastImage.priority.normal,
             }}
             resizeMode={FastImage.resizeMode.cover}
+            onLoadStart={() => setLoading(true)}
+            onLoadEnd={() => setLoading(false)}
           />
         </View>
         <View style={styles.flexRight}>
@@ -44,6 +54,7 @@ const NewsCard = ({ item }) => {
             <Text style={styles.intro}>{item.source.toUpperCase()}</Text>
             <Text style={styles.intro}>{formatDate(item.datetime)}</Text>
           </View>
+          {/* check for 90 strings and return only string less than 90, if more than that just show ... */}
           <Text style={styles.description}>
             {item.headline.length > 90
               ? item.headline.substring(0, 90) + "..."
@@ -93,6 +104,14 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     marginBottom: 4,
+  },
+  loadingContainer: {
+    position: "absolute",
+    width: "100%",
+    height: "100%",
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#000000",
   },
 });
 

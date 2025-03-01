@@ -1,18 +1,5 @@
 import React from "react";
-import {
-  View,
-  StyleSheet,
-  Text,
-  Image,
-  Platform,
-  KeyboardAvoidingView,
-  Keyboard,
-  TouchableOpacity,
-} from "react-native";
-import { TouchableWithoutFeedback } from "react-native";
-
-// import fabActive from '../assets/images/fab_active.png';
-// import fabInactive from '../assets/images/fab_inactive.png';
+import { StyleSheet, Text, TouchableOpacity } from "react-native";
 
 const CustomButton = ({ text, onClick }) => {
   function onClickB() {

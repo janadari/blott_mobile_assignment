@@ -9,16 +9,16 @@ const useUserName = () => {
     const fetchUserName = async () => {
       try {
         const storedUserName = await AsyncStorage.getItem("USER_FIRST_NAME");
-        console.log("sti", storedUserName);
 
         setUserName(storedUserName);
       } catch (error) {
-        console.error("Error retrieving username from AsyncStorage", error);
+        console.error("Error retrieving username from Async Storage", error);
       } finally {
-        setLoading(false); // Data has loaded
+        setLoading(false);
       }
     };
 
+    // this function is to get user's first name from async storage
     fetchUserName();
   }, []);
 
