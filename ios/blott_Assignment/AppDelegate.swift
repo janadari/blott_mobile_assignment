@@ -14,7 +14,7 @@ class AppDelegate: RCTAppDelegate {
 
     let result = super.application(application, didFinishLaunchingWithOptions: launchOptions)
 
-    // RNSplashScreen.show() // Show splash screen after React Native is initialized
+    // RNSplashScreen.show()
 
     return result
   }
