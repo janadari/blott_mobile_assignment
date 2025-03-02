@@ -28,7 +28,7 @@ function App(): React.JSX.Element {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName={userName ? "HomeScreen" : "InfoScreen"}
+        initialRouteName={userName ? "InfoScreen" : "InfoScreen"}
       >
         <Stack.Screen
           name="HomeScreen"

@@ -22,6 +22,7 @@ const NotificationScreen = ({ navigation }) => {
   }, [isClicked]);
 
   const checkNotificationPermission = async () => {
+    // since ios.Notification unavailable, added camera permission for now
     const permission =
       Platform.OS === "ios"
         ? PERMISSIONS.IOS.CAMERA
@@ -35,10 +36,12 @@ const NotificationScreen = ({ navigation }) => {
     } else {
       try {
         const result = await request(permission);
+        console.log("notification");
       } catch (e) {
         console.log("error", e);
         // askToOpenSettings();
       } finally {
+        // even allow or no, go to home screen
         onContinueClick();
       }
     }
@@ -89,7 +92,7 @@ const NotificationScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
   sectionContainer: {
     flex: 1,
-    padding: 24,
+    padding: 16,
     justifyContent: "center",
     alignItems: "center",
   },

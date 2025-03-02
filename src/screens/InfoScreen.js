@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
   },
   sectionContainer: {
     flex: 1,
-    padding: 24,
+    padding: 16,
     height: "100%",
   },
   title: {
