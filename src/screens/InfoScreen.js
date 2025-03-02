@@ -57,6 +57,7 @@ const InfoScreen = ({ navigation }) => {
             placeholder="First name"
             placeholderTextColor="#A3A3A3"
             autoCapitalize="words"
+            maxLength={20}
             onChangeText={(text) => setFirstName(text)}
           />
 
@@ -66,6 +67,7 @@ const InfoScreen = ({ navigation }) => {
             placeholder="Last name"
             placeholderTextColor="#A3A3A3"
             autoCapitalize="words"
+            maxLength={20}
             onChangeText={(text) => setLastName(text)}
           />
 

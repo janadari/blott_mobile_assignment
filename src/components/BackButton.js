@@ -1,4 +1,5 @@
 import React from "react";
+import { Platform } from "react-native";
 import { TouchableOpacity, Image, StyleSheet } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import backButton from "../../assets/images/back_button.png";
@@ -15,7 +16,10 @@ const BackButton = () => {
   };
 
   return (
-    <TouchableOpacity onPress={backBtnClick} style={styles.button}>
+    <TouchableOpacity
+      style={[styles.button, { top: Platform.OS === "ios" ? 72 : 30 }]}
+      onPress={() => backBtnClick()}
+    >
       <Image source={backButton} style={styles.icon} />
     </TouchableOpacity>
   );
@@ -24,7 +28,7 @@ const BackButton = () => {
 const styles = StyleSheet.create({
   button: {
     position: "absolute",
-    top: 24,
+    top: 40,
     left: 10,
     padding: 10,
   },

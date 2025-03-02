@@ -22,8 +22,6 @@ PODS:
     - libwebp/sharpyuv
   - Permission-Camera (3.0.4):
     - RNPermissions
-  - Permission-Contacts (3.0.4):
-    - RNPermissions
   - Permission-Notifications (3.0.4):
     - RNPermissions
   - RCT-Folly (2024.11.18.00):
@@ -1722,7 +1720,6 @@ DEPENDENCIES:
   - glog (from `../node_modules/react-native/third-party-podspecs/glog.podspec`)
   - hermes-engine (from `../node_modules/react-native/sdks/hermes-engine/hermes-engine.podspec`)
   - Permission-Camera (from `../node_modules/react-native-permissions/ios/Camera`)
-  - Permission-Contacts (from `../node_modules/react-native-permissions/ios/Contacts`)
   - Permission-Notifications (from `../node_modules/react-native-permissions/ios/Notifications`)
   - RCT-Folly (from `../node_modules/react-native/third-party-podspecs/RCT-Folly.podspec`)
   - RCT-Folly/Fabric (from `../node_modules/react-native/third-party-podspecs/RCT-Folly.podspec`)
@@ -1818,8 +1815,6 @@ EXTERNAL SOURCES:
     :tag: hermes-2025-01-13-RNv0.78.0-a942ef374897d85da38e9c8904574f8376555388
   Permission-Camera:
     :path: "../node_modules/react-native-permissions/ios/Camera"
-  Permission-Contacts:
-    :path: "../node_modules/react-native-permissions/ios/Contacts"
   Permission-Notifications:
     :path: "../node_modules/react-native-permissions/ios/Notifications"
   RCT-Folly:
@@ -1965,7 +1960,6 @@ SPEC CHECKSUMS:
   hermes-engine: b417d2b2aee3b89b58e63e23a51e02be91dc876d
   libwebp: 02b23773aedb6ff1fd38cec7a77b81414c6842a8
   Permission-Camera: ca6a7c33b607b471d8f4bf96bd6f55629d204930
-  Permission-Contacts: af870d54afe471db33700d929c4ac50ba1d23160
   Permission-Notifications: d64164945b09c21c41b604069eb6724afa829be7
   RCT-Folly: e78785aa9ba2ed998ea4151e314036f6c49e6d82
   RCTDeprecation: b2eecf2d60216df56bc5e6be5f063826d3c1ee35
@@ -2037,6 +2031,6 @@ SPEC CHECKSUMS:
   SocketRocket: d4aabe649be1e368d1318fdf28a022d714d65748
   Yoga: afd04ff05ebe0121a00c468a8a3c8080221cb14c
 
-PODFILE CHECKSUM: 5bf083d6597fa2e7e2bf81af2758471bc3f1cd50
+PODFILE CHECKSUM: 0c51bd73ec104d45b1ab4308cec7844b7933dc2c
 
 COCOAPODS: 1.16.2

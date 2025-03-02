@@ -36,10 +36,15 @@ const NotificationScreen = ({ navigation }) => {
     } else {
       try {
         const result = await request(permission);
-        console.log("notification");
+        console.log("permission result", result);
+
+        // There is a issue opening default notification permission dialog,for now, added custom dialog saying open the setting
+        if (result === "unavailable") {
+          askToOpenSettings();
+        }
       } catch (e) {
         console.log("error", e);
-        // askToOpenSettings();
+        askToOpenSettings();
       } finally {
         // even allow or no, go to home screen
         onContinueClick();

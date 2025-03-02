@@ -3,7 +3,6 @@ import { StyleSheet, Text, TouchableOpacity } from "react-native";
 
 const CustomButton = ({ text, onClick }) => {
   function onClickB() {
-    console.log("clicklk");
     onClick();
   }
   return (
